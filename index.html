@@ -1,0 +1,2103 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>3Đ – ĐEO ĐẠI ĐI | Vòng tay handmade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fffaf6;
+        --bg2: #f8ece9;
+        --card: #fff;
+        --ink: #3d2a33;
+        --mute: #85707a;
+        --pink: #cf5f84;
+        --pink2: #e48aa6;
+        --soft: #f9e8ec;
+        --lav: #a898d6;
+        --lavs: #f1edfa;
+        --line: #efdde0;
+        --sh: 0 18px 40px -22px rgba(120, 60, 85, 0.45);
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #2a1b24;
+          --bg2: #33222d;
+          --card: #3a2833;
+          --ink: #ffeaf1;
+          --mute: #c9a9b8;
+          --soft: #4d3141;
+          --lavs: #3e3354;
+          --line: #53384a;
+        }
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+        height: 100%;
+      }
+      body {
+        font-family: Quicksand, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1,
+      h2,
+      h3,
+      .logo b {
+        font-family: "Baloo 2", Quicksand, sans-serif;
+        line-height: 1.15;
+      }
+      button {
+        font: inherit;
+        cursor: pointer;
+        border: 0;
+        background: none;
+        color: inherit;
+      }
+      svg.i {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        flex: none;
+      }
+      .wrap {
+        max-width: 1160px;
+        margin: auto;
+        padding: 0 20px;
+      }
+      section {
+        padding: 72px 0;
+      }
+      .eyebrow {
+        color: var(--pink);
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .h2 {
+        font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+        margin: 6px 0 8px;
+      }
+      .sub {
+        color: var(--mute);
+        max-width: 520px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        border-radius: 99px;
+        font-weight: 700;
+        transition: 0.25s;
+      }
+      .btn.p {
+        background: linear-gradient(135deg, var(--pink), var(--pink2));
+        color: #fff;
+        box-shadow: var(--sh);
+      }
+      .btn.p:hover {
+        transform: translateY(-2px);
+      }
+      .btn.o {
+        border: 2px solid var(--pink);
+        color: var(--pink);
+      }
+      .btn.o:hover {
+        background: var(--soft);
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        background: color-mix(in srgb, var(--bg) 85%, transparent);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 68px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+      }
+      .logo i {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--pink2), var(--lav));
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font: 700 1.05rem "Baloo 2";
+        font-style: normal;
+      }
+      .logo b {
+        font-size: 1.05rem;
+        color: var(--pink);
+        letter-spacing: 0.04em;
+      }
+      nav {
+        margin-left: auto;
+        display: flex;
+        gap: 6px;
+      }
+      nav a {
+        padding: 8px 16px;
+        border-radius: 99px;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--ink);
+      }
+      nav a:hover,
+      nav a.on {
+        background: var(--soft);
+        color: var(--pink);
+      }
+      .tools {
+        display: flex;
+        gap: 4px;
+      }
+      .ib {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        position: relative;
+      }
+      .ib:hover {
+        background: var(--soft);
+        color: var(--pink);
+      }
+      .cnt {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: var(--pink);
+        color: #fff;
+        font-size: 0.68rem;
+        font-weight: 700;
+        min-width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        display: grid;
+        place-items: center;
+      }
+      .burger {
+        display: none;
+      }
+      .searchbar {
+        display: none;
+        padding: 0 0 12px;
+      }
+      .searchbar.on {
+        display: block;
+      }
+      .searchbar input,
+      .f input,
+      .f textarea,
+      select {
+        width: 100%;
+        padding: 12px 18px;
+        border-radius: 99px;
+        border: 1.5px solid var(--line);
+        background: var(--card);
+        color: var(--ink);
+        font: inherit;
+      }
+      .hero {
+        padding: 48px 0 40px;
+        background:
+          radial-gradient(600px 400px at 85% 20%, var(--lavs), transparent),
+          radial-gradient(500px 400px at 0 0, var(--soft), transparent);
+      }
+      .hg {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 32px;
+        align-items: center;
+      }
+      .hero h1 {
+        font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+        margin: 12px 0 16px;
+      }
+      .hero h1 em {
+        color: var(--pink);
+        font-style: normal;
+      }
+      .hero p {
+        color: var(--mute);
+        max-width: 440px;
+        margin-bottom: 24px;
+      }
+      .cta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .pr {
+        margin-top: 18px;
+        font-size: 0.85rem;
+        color: var(--mute);
+      }
+      .collage {
+        position: relative;
+        aspect-ratio: 1;
+        max-width: 460px;
+        margin-left: auto;
+        width: 100%;
+      }
+      .collage .b {
+        position: absolute;
+        background: var(--card);
+        border-radius: 50%;
+        box-shadow: var(--sh);
+        animation: fl 6s ease-in-out infinite;
+      }
+      .b1 {
+        width: 62%;
+        left: 0;
+        top: 4%;
+      }
+      .b2 {
+        width: 55%;
+        right: 0;
+        top: 34%;
+        animation-delay: -2s !important;
+      }
+      .b3 {
+        width: 38%;
+        left: 14%;
+        bottom: 0;
+        animation-delay: -4s !important;
+      }
+      .dec {
+        position: absolute;
+        color: var(--pink2);
+        animation: fl 5s ease-in-out infinite;
+      }
+      @keyframes fl {
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+      .trust {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-top: 40px;
+      }
+      .tr {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 16px 18px;
+      }
+      .tr span {
+        width: 46px;
+        height: 46px;
+        border-radius: 16px;
+        background: var(--lavs);
+        color: var(--lav);
+        display: grid;
+        place-items: center;
+        flex: none;
+      }
+      .tr b {
+        display: block;
+      }
+      .tr small {
+        color: var(--mute);
+      }
+      .shead {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+      }
+      .filters {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+      .chip {
+        padding: 8px 18px;
+        border-radius: 99px;
+        border: 1.5px solid var(--line);
+        background: var(--card);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+      .chip.on,
+      .chip:hover {
+        background: var(--pink);
+        border-color: var(--pink);
+        color: #fff;
+      }
+      .filters select {
+        width: auto;
+        padding: 9px 16px;
+        margin-left: auto;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        overflow: hidden;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--sh);
+      }
+      .img {
+        position: relative;
+        aspect-ratio: 1;
+        background: linear-gradient(160deg, var(--soft), var(--lavs));
+        cursor: pointer;
+        padding: 14px;
+      }
+      .img svg {
+        width: 100%;
+        height: 100%;
+        transition: 0.4s;
+      }
+      .card:hover .img svg {
+        transform: scale(1.07) rotate(4deg);
+      }
+      .tag {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 99px;
+        background: var(--pink);
+        color: #fff;
+      }
+      .tag.n {
+        background: var(--lav);
+      }
+      .cb {
+        padding: 14px 16px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+      .cb h3 {
+        font-size: 1.05rem;
+        cursor: pointer;
+      }
+      .cb small {
+        color: var(--mute);
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+        padding-top: 8px;
+      }
+      .price {
+        font-weight: 700;
+        color: var(--pink);
+        font-size: 1.1rem;
+      }
+      .add {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--soft);
+        color: var(--pink);
+        display: grid;
+        place-items: center;
+        transition: 0.2s;
+      }
+      .add:hover {
+        background: var(--pink);
+        color: #fff;
+      }
+      .empty {
+        grid-column: 1/-1;
+        text-align: center;
+        color: var(--mute);
+        padding: 40px;
+      }
+      .cats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+      .cat {
+        border-radius: 26px;
+        padding: 28px 20px;
+        text-align: left;
+        background: var(--card);
+        border: 1px solid var(--line);
+        transition: 0.3s;
+      }
+      .cat:hover {
+        background: var(--soft);
+        transform: translateY(-4px);
+      }
+      .cat span {
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 18px;
+        background: var(--soft);
+        color: var(--pink);
+        margin-bottom: 14px;
+      }
+      .cat b {
+        font-family: "Baloo 2";
+        font-size: 1.1rem;
+      }
+      .cat small {
+        display: block;
+        color: var(--mute);
+      }
+      .cust {
+        background: linear-gradient(135deg, var(--soft), var(--lavs));
+        border-radius: 36px;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+        align-items: center;
+      }
+      .prev {
+        background: var(--card);
+        border-radius: 30px;
+        aspect-ratio: 1;
+        padding: 20px;
+        box-shadow: var(--sh);
+      }
+      .prev svg {
+        width: 100%;
+        height: 100%;
+      }
+      .opt {
+        margin: 16px 0 6px;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+      .opts {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .sw {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 2px var(--line);
+      }
+      .sw.on {
+        box-shadow: 0 0 0 3px var(--pink);
+      }
+      .cust .chip {
+        font-size: 0.85rem;
+        padding: 7px 15px;
+      }
+      .tot {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 22px;
+        flex-wrap: wrap;
+      }
+      .tot b {
+        font: 700 1.5rem "Baloo 2";
+        color: var(--pink);
+      }
+      .rev {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .rc {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        padding: 18px;
+      }
+      .rc .ph {
+        aspect-ratio: 16/10;
+        border-radius: 18px;
+        background: var(--lavs);
+        padding: 8px;
+        margin-bottom: 14px;
+      }
+      .rc .ph svg {
+        width: 100%;
+        height: 100%;
+      }
+      .st {
+        color: #f5b73d;
+        display: flex;
+        gap: 2px;
+      }
+      .st svg {
+        fill: currentColor;
+        width: 16px;
+        height: 16px;
+      }
+      .rc p {
+        margin: 8px 0;
+        color: var(--mute);
+        font-size: 0.95rem;
+      }
+      .ct {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+        align-items: start;
+      }
+      .f {
+        display: grid;
+        gap: 12px;
+      }
+      .f textarea {
+        border-radius: 22px;
+        min-height: 110px;
+        resize: vertical;
+      }
+      footer {
+        background: var(--bg2);
+        border-top: 1px solid var(--line);
+        padding: 48px 0 24px;
+        margin-top: 40px;
+      }
+      .fg {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 28px;
+      }
+      footer h4 {
+        font-family: "Baloo 2";
+        margin-bottom: 10px;
+        color: var(--pink);
+      }
+      footer p,
+      footer a {
+        color: var(--mute);
+        font-size: 0.92rem;
+        display: block;
+        text-decoration: none;
+        margin-bottom: 6px;
+      }
+      footer a:hover {
+        color: var(--pink);
+      }
+      .cp {
+        text-align: center;
+        margin-top: 28px;
+        color: var(--mute);
+        font-size: 0.85rem;
+      }
+      .ov {
+        position: fixed;
+        inset: 0;
+        background: rgba(74, 47, 60, 0.45);
+        backdrop-filter: blur(3px);
+        z-index: 50;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+      }
+      .ov.on {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .drawer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: min(420px, 100%);
+        background: var(--bg);
+        z-index: 60;
+        transform: translateX(100%);
+        transition: 0.35s;
+        display: flex;
+        flex-direction: column;
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+      .drawer.on {
+        transform: none;
+      }
+      .dh {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 20px;
+        border-bottom: 1px solid var(--line);
+      }
+      .dh h3 {
+        font-size: 1.3rem;
+      }
+      .items {
+        flex: 1;
+        overflow: auto;
+        padding: 12px 20px;
+      }
+      .it {
+        display: flex;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px dashed var(--line);
+      }
+      .it .t {
+        width: 68px;
+        height: 68px;
+        border-radius: 16px;
+        background: var(--soft);
+        padding: 4px;
+        flex: none;
+      }
+      .it .t svg {
+        width: 100%;
+        height: 100%;
+      }
+      .it h4 {
+        font-size: 0.95rem;
+      }
+      .qty {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 6px;
+        background: var(--soft);
+        border-radius: 99px;
+        padding: 2px;
+      }
+      .qty button {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+      }
+      .qty button:hover {
+        background: var(--pink);
+        color: #fff;
+      }
+      .df {
+        padding: 18px 20px calc(18px + env(safe-area-inset-bottom, 0px));
+        border-top: 1px solid var(--line);
+      }
+      .df .row {
+        margin: 0 0 12px;
+        padding: 0;
+        font-weight: 700;
+      }
+      .modal {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -46%);
+        width: min(840px, calc(100% - 28px));
+        max-height: 90vh;
+        overflow: auto;
+        background: var(--bg);
+        border-radius: 32px;
+        z-index: 60;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+        padding: 28px;
+      }
+      .modal.on {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%);
+      }
+      .modal .img {
+        border-radius: 24px;
+        cursor: default;
+      }
+      .mx {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+      }
+      .toast {
+        position: fixed;
+        left: 50%;
+        bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+        transform: translate(-50%, 30px);
+        background: var(--ink);
+        color: var(--bg);
+        padding: 12px 22px;
+        border-radius: 99px;
+        z-index: 80;
+        opacity: 0;
+        transition: 0.3s;
+        font-weight: 600;
+        font-size: 0.9rem;
+        pointer-events: none;
+      }
+      .toast.on {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+      @media (max-width: 980px) {
+        .grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .fg {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 760px) {
+        section {
+          padding: 48px 0;
+        }
+        .burger {
+          display: grid;
+        }
+        nav {
+          position: absolute;
+          top: 68px;
+          left: 0;
+          right: 0;
+          background: var(--bg);
+          flex-direction: column;
+          padding: 10px 20px 16px;
+          border-bottom: 1px solid var(--line);
+          display: none;
+        }
+        nav.on {
+          display: flex;
+        }
+        .tools {
+          margin-left: auto;
+        }
+        .hg,
+        .cust,
+        .ct,
+        .modal {
+          grid-template-columns: 1fr;
+        }
+        .collage {
+          margin: auto;
+          max-width: 340px;
+        }
+        .trust,
+        .rev {
+          grid-template-columns: 1fr;
+        }
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+        .cats {
+          grid-template-columns: 1fr 1fr;
+        }
+        .cust {
+          padding: 22px;
+        }
+        .filters select {
+          margin-left: 0;
+        }
+        .logo b {
+          font-size: 0.9rem;
+        }
+      }
+      :root {
+        --serif: "Cormorant Garamond", Georgia, serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      .logo b,
+      .logo i,
+      .cat b,
+      .tot b,
+      footer h4,
+      .price {
+        font-family: var(--serif);
+        font-weight: 600;
+      }
+      .h2 {
+        font-size: clamp(2rem, 4vw, 2.9rem);
+        font-weight: 500;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 6.2vw, 4.6rem);
+        font-weight: 500;
+        line-height: 1.02;
+      }
+      .hero h1 em {
+        font-style: italic;
+      }
+      .eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.22em;
+      }
+      .price {
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+      .cb h3 {
+        font-size: 1.25rem;
+      }
+      .tot b {
+        font-size: 1.9rem;
+      }
+      .logo b {
+        letter-spacing: 0.16em;
+        font-size: 1rem;
+      }
+      .logo i {
+        background: none;
+        border: 1.5px solid var(--pink);
+        color: var(--pink);
+        font-size: 1.2rem;
+      }
+      .btn {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+      }
+      .btn.p {
+        background: var(--pink);
+        box-shadow: none;
+      }
+      .btn.p:hover {
+        background: #b94e72;
+        box-shadow: var(--sh);
+      }
+      .btn:active {
+        transform: scale(0.97);
+      }
+      .btn.o {
+        border: 1.5px solid var(--ink);
+        color: var(--ink);
+      }
+      .btn.o:hover {
+        background: var(--ink);
+        color: var(--bg);
+      }
+      nav a {
+        border-radius: 0;
+        padding: 8px 10px;
+        position: relative;
+        background: none !important;
+      }
+      nav a::after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 2px;
+        height: 1.5px;
+        background: var(--pink);
+        transform: scaleX(0);
+        transition: 0.3s;
+      }
+      nav a:hover::after,
+      nav a.on::after {
+        transform: scaleX(1);
+      }
+      .card,
+      .rc,
+      .cat {
+        border-radius: 20px;
+      }
+      .card {
+        border: 0;
+        background: transparent;
+      }
+      .card:hover {
+        transform: none;
+        box-shadow: none;
+      }
+      .card:hover .img {
+        box-shadow: var(--sh);
+      }
+      .img {
+        border-radius: 20px;
+        background: radial-gradient(
+          circle at 50% 40%,
+          var(--card),
+          var(--soft) 82%
+        );
+        transition: box-shadow 0.4s;
+      }
+      .cb {
+        padding: 14px 2px;
+      }
+      .tag {
+        font-size: 0.66rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .add {
+        width: auto;
+        height: 40px;
+        padding: 0 12px;
+        border-radius: 99px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+      .add span {
+        max-width: 0;
+        opacity: 0;
+        white-space: nowrap;
+        transition: 0.3s;
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+      .card:hover .add span {
+        max-width: 90px;
+        opacity: 1;
+        margin-left: 6px;
+      }
+      .add:active {
+        transform: scale(0.92);
+      }
+      @media (hover: none) {
+        .add {
+          width: 44px;
+          height: 44px;
+          justify-content: center;
+          padding: 0;
+        }
+        .add span {
+          display: none;
+        }
+      }
+      .tr {
+        background: transparent;
+        border: 0;
+        border-top: 1px solid var(--line);
+        border-radius: 0;
+        padding: 18px 4px;
+      }
+      .tr span {
+        background: transparent;
+        border: 1px solid var(--line);
+        color: var(--pink);
+        border-radius: 50%;
+      }
+      .collage .b {
+        border: 6px solid #fff;
+      }
+      .chip {
+        font-size: 0.85rem;
+        padding: 8px 18px;
+        transition: 0.2s;
+      }
+      .f input,
+      .f textarea,
+      .searchbar input,
+      select {
+        border-radius: 14px;
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: 2px solid var(--pink2);
+        outline-offset: 1px;
+      }
+      button:focus-visible,
+      a:focus-visible {
+        outline: 2px solid var(--pink);
+        outline-offset: 2px;
+      }
+      footer button {
+        color: var(--mute);
+        font-size: 0.92rem;
+        display: block;
+        margin-bottom: 6px;
+        text-align: left;
+      }
+      footer button:hover {
+        color: var(--pink);
+      }
+      .rv {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          opacity 0.7s,
+          transform 0.7s;
+      }
+      .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      @keyframes bump {
+        40% {
+          transform: scale(1.4);
+        }
+      }
+      .cnt.bump {
+        animation: bump 0.4s;
+      }
+      body.lock {
+        overflow: hidden;
+      }
+      .modal.one {
+        grid-template-columns: 1fr;
+        width: min(520px, calc(100% - 28px));
+      }
+      .mbar {
+        display: none;
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+        z-index: 40;
+        background: var(--ink);
+        color: var(--bg);
+        border-radius: 99px;
+        padding: 15px 22px;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+        transform: translateY(160%);
+        transition: 0.4s;
+      }
+      .mbar.on {
+        transform: none;
+      }
+      @media (max-width: 760px) {
+        .mbar {
+          display: flex;
+        }
+        .toast {
+          bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+        }
+        .modal,
+        .modal.one {
+          top: auto;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          max-height: 92vh;
+          border-radius: 28px 28px 0 0;
+          transform: translateY(100%);
+        }
+        .modal.on {
+          transform: none;
+        }
+        .filters {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          margin-right: -20px;
+          padding-right: 20px;
+          scrollbar-width: none;
+        }
+        .filters .chip,
+        .filters select {
+          flex: none;
+        }
+        .hero {
+          padding-top: 28px;
+        }
+        .ib {
+          width: 44px;
+          height: 44px;
+        }
+        footer {
+          padding-bottom: 96px;
+        }
+      }
+
+      .order-summary {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 14px;
+        margin: 12px 0 16px;
+        max-height: 220px;
+        overflow: auto;
+      }
+      .order-line {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px dashed var(--line);
+      }
+      .order-line:last-child {
+        border-bottom: 0;
+      }
+      .order-line .mini {
+        width: 52px;
+        height: 52px;
+        flex: none;
+        border-radius: 12px;
+        background: var(--soft);
+        padding: 3px;
+      }
+      .order-line .mini svg {
+        width: 100%;
+        height: 100%;
+      }
+      .order-line small {
+        display: block;
+        color: var(--mute);
+      }
+      .save-note {
+        font-size: 0.88rem;
+        color: var(--mute);
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <div class="nav">
+          <a
+            class="logo"
+            href="#top"
+            style="text-decoration: none; color: inherit"
+            ><i>3Đ</i><b>ĐEO ĐẠI ĐI</b></a
+          >
+          <nav id="nav">
+            <a href="#top" class="on">Trang chủ</a><a href="#shop">Cửa hàng</a
+            ><a href="#custom">Tự ghép vòng</a><a href="#contact">Liên hệ</a>
+          </nav>
+          <div class="tools">
+            <button class="ib" id="sb" aria-label="Tìm kiếm"></button
+            ><button class="ib" id="ub" aria-label="Tài khoản"></button
+            ><button class="ib" id="cb" aria-label="Giỏ hàng">
+              <span class="cnt" id="cc">0</span></button
+            ><button class="ib burger" id="mb" aria-label="Menu"></button>
+          </div>
+        </div>
+        <div class="searchbar" id="sbar">
+          <input id="q" placeholder="Tìm vòng theo tên, màu, charm…" />
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <div class="hero">
+        <div class="wrap">
+          <div class="hg">
+            <div>
+              <span class="eyebrow">Made to be yours</span>
+              <h1>Vòng handmade<br />mang dấu ấn <em>của riêng bạn.</em></h1>
+              <p>
+                Chọn một chiếc vòng có sẵn trong cửa hàng, hoặc tự ghép vòng với
+                từng hạt, màu và charm theo ý muốn. Thấy trước vòng trên màn
+                hình rồi mới đặt.
+              </p>
+              <div class="cta">
+                <a class="btn p" href="#shop"
+                  >Mua ngay <span data-i="arrow"></span></a
+                ><a class="btn o" href="#custom"
+                  ><span data-i="wand"></span>Tự ghép vòng</a
+                >
+              </div>
+              <div class="pr">
+                49.000đ – 149.000đ · dễ thương như giá sinh viên
+              </div>
+            </div>
+            <div class="collage" id="collage"></div>
+          </div>
+          <div class="trust">
+            <div class="tr">
+              <span data-i="hand"></span>
+              <div>
+                <b>Handmade 100%</b><small>Ghép tay theo từng đơn</small>
+              </div>
+            </div>
+            <div class="tr">
+              <span data-i="ruler"></span>
+              <div>
+                <b>Đổi size miễn phí</b
+                ><small>Trong 7 ngày, size 14–18 cm</small>
+              </div>
+            </div>
+            <div class="tr">
+              <span data-i="truck"></span>
+              <div>
+                <b>Giao hàng toàn quốc</b><small>Nhận vòng sau 2–4 ngày</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="shop">
+        <div class="wrap">
+          <div class="shead">
+            <div>
+              <span class="eyebrow">Cửa hàng</span>
+              <h2 class="h2">Vòng được yêu thích nhất</h2>
+              <p class="sub">Khách đặt nhiều nhất tháng này.</p>
+            </div>
+          </div>
+          <div class="filters" id="filters"></div>
+          <div class="grid" id="grid"></div>
+        </div>
+      </section>
+
+      <section style="padding-top: 0">
+        <div class="wrap">
+          <span class="eyebrow">Danh mục</span>
+          <h2 class="h2" style="margin-bottom: 22px">Chọn theo phong cách</h2>
+          <div class="cats" id="cats"></div>
+        </div>
+      </section>
+
+      <section id="custom">
+        <div class="wrap">
+          <div class="cust">
+            <div class="prev" id="prev"></div>
+            <div>
+              <span class="eyebrow">Thiết kế riêng</span>
+              <h2 class="h2">Tự ghép vòng của bạn</h2>
+              <p class="sub">
+                Chọn màu, loại hạt, charm và size. Vòng cập nhật ngay trước mắt.
+              </p>
+              <div class="opt">Màu chủ đạo</div>
+              <div class="opts" id="oc"></div>
+              <div class="opt">Loại hạt</div>
+              <div class="opts" id="ob"></div>
+              <div class="opt">Charm</div>
+              <div class="opts" id="och"></div>
+              <div class="opt">Size cổ tay</div>
+              <div class="opts" id="os"></div>
+              <div class="tot">
+                <b id="cp">49.000đ</b
+                ><button class="btn p" id="addc">
+                  <span data-i="bag"></span>Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="padding-top: 0">
+        <div class="wrap">
+          <span class="eyebrow">Khách hàng nói gì</span>
+          <h2 class="h2" style="margin-bottom: 22px">
+            Những cổ tay đang diện 3Đ
+          </h2>
+          <div class="rev" id="rev"></div>
+        </div>
+      </section>
+
+      <section id="contact" style="padding-top: 0">
+        <div class="wrap ct">
+          <div>
+            <span class="eyebrow">Liên hệ</span>
+            <h2 class="h2">Có ý tưởng riêng?</h2>
+            <p class="sub">
+              Gửi lời nhắn cho 3Đ để đặt vòng đôi, vòng quà tặng hoặc thiết kế
+              theo yêu cầu. Shop phản hồi trong ngày.
+            </p>
+          </div>
+          <form class="f" id="cf">
+            <input required placeholder="Tên của bạn" name="n" /><input
+              required
+              type="email"
+              placeholder="Email hoặc số điện thoại"
+              name="e"
+            /><textarea
+              required
+              placeholder="Bạn muốn vòng như thế nào?"
+            ></textarea
+            ><button class="btn p" style="justify-content: center">
+              Gửi lời nhắn <span data-i="send"></span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="fg">
+          <div>
+            <a
+              class="logo"
+              style="text-decoration: none; color: inherit; margin-bottom: 12px"
+              ><i>3Đ</i><b>ĐEO ĐẠI ĐI</b></a
+            >
+            <p>
+              Những chiếc vòng nhỏ xinh được ghép tay từng hạt, để mỗi cổ tay
+              đều có một câu chuyện riêng. Made to be yours.
+            </p>
+          </div>
+          <div>
+            <h4>Cửa hàng</h4>
+            <a href="#shop">Tất cả vòng</a><a href="#custom">Tự ghép vòng</a
+            ><a href="#contact">Đặt vòng đôi</a>
+          </div>
+          <div>
+            <h4>Chính sách</h4>
+            <button data-info="ship">Giao hàng 2–4 ngày</button
+            ><button data-info="size">Đổi size miễn phí</button
+            ><button data-info="ret">Đổi trả trong 7 ngày</button>
+          </div>
+          <div>
+            <h4>Kết nối</h4>
+            <button data-soc="1">Instagram</button
+            ><button data-soc="1">TikTok</button
+            ><button data-soc="1">Facebook</button>
+          </div>
+        </div>
+        <div class="cp">© 2026 3Đ – ĐEO ĐẠI ĐI. Handmade with love.</div>
+      </div>
+    </footer>
+
+    <div class="ov" id="ov"></div>
+    <aside class="drawer" id="dr">
+      <div class="dh">
+        <h3>Giỏ hàng</h3>
+        <button class="ib" id="dx" aria-label="Đóng"></button>
+      </div>
+      <div class="items" id="items"></div>
+      <div class="df">
+        <div class="row">
+          <span>Tạm tính</span><span class="price" id="tot">0đ</span>
+        </div>
+        <button
+          class="btn p"
+          id="co"
+          style="width: 100%; justify-content: center"
+        >
+          Thanh toán
+        </button>
+      </div>
+    </aside>
+    <div class="modal" id="md"></div>
+    <button class="mbar" id="mbar">
+      <span id="mn"></span><span id="mt"></span>
+    </button>
+    <div class="toast" id="ts"></div>
+
+    <script>
+      // ===== CẤU HÌNH SUPABASE =====
+      // Sau khi tạo dự án Supabase, điền Project URL và Publishable key vào hai dòng dưới.
+      // Chỉ dùng publishable key (sb_publishable_...) hoặc anon key cũ; TUYỆT ĐỐI không dùng secret/service_role.
+      const SUPABASE_URL = "DAN_PROJECT_URL_VAO_DAY";
+      const SUPABASE_PUBLISHABLE_KEY = "DAN_PUBLISHABLE_KEY_VAO_DAY";
+
+      async function saveOrderToSupabase(order) {
+        if (
+          !SUPABASE_URL.startsWith("https://") ||
+          SUPABASE_URL.includes("https://qpdtgrxwtyztvxovcprf.supabase.co")
+        ) {
+          throw new Error("Chưa cấu hình Supabase URL trong file HTML.");
+        }
+        if (
+          !SUPABASE_PUBLISHABLE_KEY ||
+          SUPABASE_PUBLISHABLE_KEY.includes(
+            "sb_publishable_z3Mj0Pfwazh4rWvzavGjkg_tDVKPlKX",
+          )
+        ) {
+          throw new Error(
+            "Chưa cấu hình Supabase Publishable key trong file HTML.",
+          );
+        }
+        const row = {
+          ma_don_hang: order.maDonHang,
+          thoi_gian_dat: new Date().toISOString(),
+          ten_khach: order.khachHang.ten,
+          so_dien_thoai: order.khachHang.soDienThoai,
+          dia_chi: order.khachHang.diaChi,
+          chi_tiet_don_hang: order.chiTietDonHang.map((i) => ({
+            ten_vong: i.tenVong,
+            don_gia: i.donGia,
+            so_luong: i.soLuong,
+            thanh_tien: i.thanhTien,
+            tuy_chon: i.tuyChon,
+          })),
+          tong_so_luong: order.tongSoLuong,
+          tong_tien: order.tongTien,
+          phuong_thuc_thanh_toan: order.phuongThucThanhToan,
+          trang_thai: order.trangThai,
+        };
+        const response = await fetch(
+          `${SUPABASE_URL.replace(/\/$/, "")}/rest/v1/don_hang`,
+          {
+            method: "POST",
+            headers: {
+              apikey: SUPABASE_PUBLISHABLE_KEY,
+              Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}`,
+              "Content-Type": "application/json",
+              Prefer: "return=minimal",
+            },
+            body: JSON.stringify(row),
+          },
+        );
+        if (!response.ok) {
+          let detail = "";
+          try {
+            detail = (await response.json()).message || "";
+          } catch (_) {}
+          throw new Error(detail || `Supabase trả về lỗi ${response.status}.`);
+        }
+      }
+      const P = {
+        arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+        wand: '<path d="m15 4 5 5L8 21l-5-5zM14 5l5 5"/>',
+        hand: '<path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/>',
+        ruler: '<path d="M3 17 17 3l4 4L7 21zM8 12l2 2M11 9l2 2M14 6l2 2"/>',
+        truck:
+          '<path d="M2 6h12v10H2zM14 10h4l4 3v3h-8zM6 19a2 2 0 1 0 0-.01M18 19a2 2 0 1 0 0-.01"/>',
+        bag: '<path d="M5 8h14l-1 12H6zM9 8a3 3 0 0 1 6 0"/>',
+        search: '<circle cx="11" cy="11" r="7"/><path d="m21 21-4-4"/>',
+        user: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+        menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
+        x: '<path d="M6 6l12 12M18 6 6 18"/>',
+        plus: '<path d="M12 5v14M5 12h14"/>',
+        minus: '<path d="M5 12h14"/>',
+        trash: '<path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>',
+        send: '<path d="m22 2-11 11M22 2l-7 20-4-9-9-4z"/>',
+        star: '<path d="m12 3 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 9.8l6.5-.9z"/>',
+        grid: '<path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/>',
+        heart:
+          '<path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/>',
+        users:
+          '<circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20a7 7 0 0 1 14 0M16 14a5 5 0 0 1 6 5"/>',
+        sparkle:
+          '<path d="M12 3v5M12 16v5M3 12h5M16 12h5M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/>',
+      };
+      const ic = (n, s) =>
+        `<svg class="i" viewBox="0 0 24 24"${s ? ` style="width:${s}px;height:${s}px"` : ""}>${P[n]}</svg>`;
+      const $ = (s) => document.querySelector(s),
+        fmt = (n) => n.toLocaleString("vi-VN") + "đ";
+      const COL = {
+        pink: ["#ffb3cc", "#ff8fb3", "#ffe1ea"],
+        lav: ["#cdbdf7", "#b9a4f0", "#efe9ff"],
+        mint: ["#a8e6d2", "#7fd6bb", "#e0f7ef"],
+        cream: ["#fff1d6", "#f5d9a6", "#ffffff"],
+      };
+      const CN = { pink: "Hồng", lav: "Lavender", mint: "Mint", cream: "Kem" };
+      function bead(t, x, y, r, c, k) {
+        const [a, b, d] = COL[c];
+        if (t === "flower") {
+          let s = "";
+          for (let i = 0; i < 5; i++) {
+            const g = (i * 72 * Math.PI) / 180;
+            s += `<circle cx="${(x + Math.sin(g) * r * 0.62).toFixed(1)}" cy="${(y - Math.cos(g) * r * 0.62).toFixed(1)}" r="${(r * 0.55).toFixed(1)}" fill="${a}"/>`;
+          }
+          return (
+            s +
+            `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(r * 0.42).toFixed(1)}" fill="#fff5c9"/>`
+          );
+        }
+        if (t === "pearl")
+          return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r}" fill="url(#rg-pearl)" stroke="#ecd9e2"/><circle cx="${(x - r * 0.3).toFixed(1)}" cy="${(y - r * 0.3).toFixed(1)}" r="${r * 0.28}" fill="#fff"/>`;
+        return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r}" fill="url(#rg-${c}-${k % 2})"/>`;
+      }
+      function charm(c) {
+        if (c === "none") return "";
+        const g = {
+          heart:
+            '<path d="M0 8s-9-5-9-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6-9 11-9 11z" fill="#ff6f9c" stroke="#d99a4e" stroke-width="2"/>',
+          bow: '<path d="M0 0-12-8v16zM0 0 12-8v16z" fill="#ff8fb3" stroke="#d99a4e" stroke-width="2"/><circle r="3" fill="#d99a4e"/>',
+          star: '<path d="m0-10 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#ffe08a" stroke="#d99a4e" stroke-width="2"/>',
+        }[c];
+        return `<g transform="translate(100 176)">${g}</g>`;
+      }
+      const DEFS =
+        Object.entries(COL)
+          .map(([c, [a, b]]) =>
+            [0, 1]
+              .map(
+                (i) =>
+                  `<radialGradient id="rg-${c}-${i}" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".35" stop-color="${i ? a : b}"/><stop offset="1" stop-color="${i ? b : a}"/></radialGradient>`,
+              )
+              .join(""),
+          )
+          .join("") +
+        '<radialGradient id="rg-pearl" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#fbeef2"/><stop offset="1" stop-color="#e5cfd8"/></radialGradient><filter id="bl"><feGaussianBlur stdDeviation="4"/></filter>';
+      function svg(o) {
+        const n = o.type === "pearl" ? 14 : 16,
+          out = [];
+        for (let i = 0; i < n; i++) {
+          const g = (i / n) * 2 * Math.PI,
+            x = 100 + Math.sin(g) * 68,
+            y = 92 - Math.cos(g) * 68,
+            c = o.mix && i % 3 === 2 ? o.mix : o.color;
+          out.push(bead(o.type, x, y, o.type === "flower" ? 13 : 11, c, i));
+        }
+        return `<svg viewBox="0 0 200 200"><defs>${DEFS}</defs><circle cx="100" cy="100" r="68" fill="none" stroke="#a45b74" opacity=".22" stroke-width="10" filter="url(#bl)"/><circle cx="100" cy="92" r="68" fill="none" stroke="#e7b3c4" stroke-width="1.5"/>${out.join("")}${charm(o.charm)}</svg>`;
+      }
+      const PR = [
+        {
+          id: 1,
+          n: "Vòng hạt hồng Milky",
+          cat: "basic",
+          p: 49000,
+          tag: "Best Seller",
+          o: { color: "pink", type: "round", charm: "none" },
+        },
+        {
+          id: 2,
+          n: "Vòng hoa lavender",
+          cat: "basic",
+          p: 59000,
+          tag: "",
+          o: { color: "lav", type: "flower", charm: "none" },
+        },
+        {
+          id: 3,
+          n: "Vòng charm trái tim",
+          cat: "charm",
+          p: 79000,
+          tag: "Best Seller",
+          o: { color: "pink", mix: "cream", type: "round", charm: "heart" },
+        },
+        {
+          id: 4,
+          n: "Vòng ngọc trai nơ",
+          cat: "charm",
+          p: 89000,
+          tag: "New Arrival",
+          o: { color: "cream", type: "pearl", charm: "bow" },
+        },
+        {
+          id: 5,
+          n: "Vòng đôi Mint & Pink",
+          cat: "couple",
+          p: 129000,
+          tag: "New Arrival",
+          o: { color: "mint", mix: "pink", type: "round", charm: "star" },
+        },
+        {
+          id: 6,
+          n: "Vòng đôi hoa nhí",
+          cat: "couple",
+          p: 149000,
+          tag: "",
+          o: { color: "pink", mix: "lav", type: "flower", charm: "heart" },
+        },
+        {
+          id: 7,
+          n: "Vòng sao lavender",
+          cat: "charm",
+          p: 69000,
+          tag: "",
+          o: { color: "lav", mix: "cream", type: "round", charm: "star" },
+        },
+        {
+          id: 8,
+          n: "Vòng ngọc trai hồng",
+          cat: "basic",
+          p: 99000,
+          tag: "Best Seller",
+          o: { color: "pink", type: "pearl", charm: "heart" },
+        },
+      ];
+      const CATS = [
+        ["all", "Tất cả", "grid"],
+        ["basic", "Vòng cơ bản", "sparkle"],
+        ["charm", "Vòng có charm", "heart"],
+        ["couple", "Vòng đôi", "users"],
+        ["custom", "Vòng thiết kế riêng", "wand"],
+      ];
+      let F = { cat: "all", price: "all", q: "" },
+        cart = [];
+      try {
+        cart = JSON.parse(localStorage.getItem("3d-cart") || "[]");
+      } catch (e) {}
+      const save = () => {
+        try {
+          localStorage.setItem("3d-cart", JSON.stringify(cart));
+        } catch (e) {}
+      };
+      function toast(m) {
+        const t = $("#ts");
+        t.textContent = m;
+        t.classList.add("on");
+        clearTimeout(toast.t);
+        toast.t = setTimeout(() => t.classList.remove("on"), 1800);
+      }
+      function renderGrid() {
+        let l = PR.filter(
+          (p) =>
+            (F.cat === "all" || p.cat === F.cat) &&
+            (F.price === "all" ||
+              (F.price === "lo"
+                ? p.p < 70000
+                : F.price === "mid"
+                  ? p.p >= 70000 && p.p < 100000
+                  : p.p >= 100000)) &&
+            ((p) =>
+              !F.q ||
+              (
+                p.n +
+                " " +
+                CN[p.o.color] +
+                " " +
+                { none: "", heart: "trái tim", bow: "nơ", star: "ngôi sao" }[
+                  p.o.charm
+                ]
+              )
+                .toLowerCase()
+                .includes(F.q))(p),
+        );
+        $("#grid").innerHTML = l.length
+          ? l
+              .map(
+                (p) =>
+                  `<article class="card"><div class="img" data-d="${p.id}">${p.tag ? `<span class="tag ${p.tag[0] === "N" ? "n" : ""}">${p.tag}</span>` : ""}${svg(p.o)}</div><div class="cb"><h3 data-d="${p.id}">${p.n}</h3><small>${{ basic: "Vòng cơ bản", charm: "Vòng có charm", couple: "Vòng đôi" }[p.cat]}</small><div class="row"><span class="price">${fmt(p.p)}</span><button class="add" data-a="${p.id}" aria-label="Thêm vào giỏ">${ic("plus")}<span>Thêm</span></button></div></div></article>`,
+              )
+              .join("")
+          : '<div class="empty">Chưa có vòng nào khớp. Thử bộ lọc khác nhé.</div>';
+      }
+      function renderFilters() {
+        $("#filters").innerHTML =
+          CATS.filter((c) => c[0] !== "custom")
+            .map(
+              (c) =>
+                `<button class="chip ${F.cat === c[0] ? "on" : ""}" data-c="${c[0]}">${c[1]}</button>`,
+            )
+            .join("") +
+          `<select id="pf" aria-label="Lọc giá"><option value="all">Mọi mức giá</option><option value="lo">Dưới 70.000đ</option><option value="mid">70.000đ – 99.000đ</option><option value="hi">Từ 100.000đ</option></select>`;
+        $("#pf").value = F.price;
+      }
+      function renderCart() {
+        const n = cart.reduce((s, i) => s + i.q, 0);
+        $("#cc").textContent = n;
+        $("#cc").style.display = n ? "grid" : "none";
+        $("#items").innerHTML = cart.length
+          ? cart
+              .map(
+                (i, k) =>
+                  `<div class="it"><div class="t">${svg(i.o)}</div><div style="flex:1"><h4>${i.n}</h4><small style="color:var(--mute)">${i.note || ""}</small><div class="row" style="padding:0"><div class="qty"><button data-m="${k}" aria-label="Giảm">${ic("minus", 14)}</button><b>${i.q}</b><button data-p="${k}" aria-label="Tăng">${ic("plus", 14)}</button></div><span class="price" style="font-size:.95rem">${fmt(i.p * i.q)}</span></div></div><button data-r="${k}" aria-label="Xóa" style="color:var(--mute)">${ic("trash", 18)}</button></div>`,
+              )
+              .join("")
+          : '<p class="empty" style="padding:60px 0">Giỏ hàng đang trống.<br>Chọn một chiếc vòng xinh nhé.</p>';
+        const T = cart.reduce((s, i) => s + i.p * i.q, 0);
+        $("#tot").textContent = fmt(T);
+        $("#mn").textContent = "Xem giỏ hàng · " + n;
+        $("#mt").textContent = fmt(T);
+        $("#mbar").classList.toggle("on", n > 0);
+        save();
+      }
+      function add(it) {
+        const e = cart.find((c) => c.key === it.key);
+        e ? e.q++ : cart.push({ ...it, q: 1 });
+        renderCart();
+        const c = $("#cc");
+        c.classList.remove("bump");
+        void c.offsetWidth;
+        c.classList.add("bump");
+        toast("Đã thêm vào giỏ hàng");
+      }
+      const pk = (p) => ({ key: "p" + p.id, n: p.n, p: p.p, o: p.o });
+      function open(el, on) {
+        $(el).classList.toggle("on", on);
+        const a =
+          $("#dr").classList.contains("on") ||
+          $("#md").classList.contains("on");
+        $("#ov").classList.toggle("on", a);
+        document.body.classList.toggle("lock", a);
+      }
+      function detail(id) {
+        const p = PR.find((x) => x.id === id);
+        $("#md").classList.remove("one");
+        $("#md").innerHTML =
+          `<button class="ib mx" data-x="1" aria-label="Đóng">${ic("x")}</button><div class="img">${p.tag ? `<span class="tag">${p.tag}</span>` : ""}${svg(p.o)}</div><div style="display:flex;flex-direction:column;gap:10px;justify-content:center"><span class="eyebrow">${{ basic: "Vòng cơ bản", charm: "Vòng có charm", couple: "Vòng đôi" }[p.cat]}</span><h2 class="h2" style="margin:0">${p.n}</h2><div class="st">${ic("star").repeat(5)}</div><span class="price" style="font-size:1.6rem">${fmt(p.p)}</span><p class="sub">Ghép tay từng hạt với dây thun bền, an toàn cho da. Có size 14–18 cm, đổi size miễn phí trong 7 ngày.</p><button class="btn p" data-a="${p.id}" style="justify-content:center">${ic("bag")} Thêm vào giỏ</button></div>`;
+        open("#md", true);
+      }
+      const X = `<button class="ib mx" data-x="1" aria-label="Đóng">${ic("x")}</button>`;
+      function checkout() {
+        const s = cart.reduce((a, i) => a + i.p * i.q, 0),
+          n = cart.reduce((a, i) => a + i.q, 0);
+        open("#dr", false);
+        $("#md").classList.add("one");
+        const summary = cart
+          .map(
+            (i) =>
+              `<div class="order-line"><div class="mini">${svg(i.o)}</div><div style="flex:1"><b>${escapeHtml(i.n)}</b><small>${escapeHtml(i.note || "Mẫu có sẵn")} · SL: ${i.q}</small><small>${fmt(i.p)} / chiếc</small></div><b>${fmt(i.p * i.q)}</b></div>`,
+          )
+          .join("");
+        $("#md").innerHTML =
+          `${X}<div><h2 class="h2" style="margin:0 0 6px">Hoàn tất đơn hàng</h2><p class="sub" style="margin-bottom:10px">${n} sản phẩm · ${fmt(s)} · thanh toán khi nhận hàng</p><div class="order-summary">${summary}<div class="row"><b>Tổng đơn hàng</b><b class="price">${fmt(s)}</b></div></div><form class="f" id="of"><input required name="customerName" autocomplete="name" placeholder="Họ và tên"><input required name="customerPhone" type="tel" autocomplete="tel" pattern="[0-9 +()-]{9,16}" placeholder="Số điện thoại"><textarea required name="customerAddress" autocomplete="street-address" placeholder="Địa chỉ nhận hàng"></textarea><button class="btn p" style="justify-content:center">Đặt hàng</button><p class="save-note">Đơn hàng sẽ được lưu trực tuyến vào hệ thống 3Đ. Thông tin giao hàng chỉ dùng để xử lý đơn; vui lòng kiểm tra kỹ trước khi đặt.</p></form></div>`;
+        open("#md", true);
+      }
+      function escapeHtml(v) {
+        return String(v ?? "").replace(
+          /[&<>"']/g,
+          (c) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#39;",
+            })[c],
+        );
+      }
+      function svgDataUri(o) {
+        const source = svg(o).replace(
+          /<svg /,
+          '<svg xmlns="http://www.w3.org/2000/svg" ',
+        );
+        return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(source);
+      }
+      function downloadOrderFile(order) {
+        const fileName = `Don-hang-${order.id}.json`;
+        const blob = new Blob([JSON.stringify(order, null, 2)], {
+          type: "application/json;charset=utf-8",
+        });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      }
+      const IN = {
+        ship: [
+          "Giao hàng toàn quốc",
+          "Đơn được ghép tay và gửi đi trong 1–2 ngày, bạn nhận vòng sau 2–4 ngày.",
+        ],
+        size: [
+          "Đổi size miễn phí",
+          "Vòng chưa vừa tay? Liên hệ 3Đ trong 7 ngày để đổi sang size 14–18 cm miễn phí.",
+        ],
+        ret: [
+          "Đổi trả trong 7 ngày",
+          "Hỗ trợ đổi trả nếu vòng bị lỗi hoặc không đúng mẫu bạn đã đặt.",
+        ],
+      };
+      function info(k) {
+        $("#md").classList.add("one");
+        $("#md").innerHTML =
+          `${X}<div><h2 class="h2" style="margin:0 0 8px">${IN[k][0]}</h2><p class="sub">${IN[k][1]}</p></div>`;
+        open("#md", true);
+      }
+      document.addEventListener("submit", async (e) => {
+        if (e.target.id !== "of") return;
+        e.preventDefault();
+        if (!cart.length) {
+          toast("Giỏ hàng đang trống");
+          open("#md", false);
+          return;
+        }
+        const form = e.target;
+        const submitButton =
+          form.querySelector('button[type="submit"]') ||
+          form.querySelector("button");
+        const originalLabel = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = "Đang lưu đơn hàng…";
+        try {
+          const orderId =
+            "3D-" +
+            new Date()
+              .toISOString()
+              .replace(/[-:TZ.]/g, "")
+              .slice(0, 14) +
+            "-" +
+            Math.random().toString(36).slice(2, 7).toUpperCase();
+          const order = {
+            maDonHang: orderId,
+            thoiGianDat: new Date().toISOString(),
+            khachHang: {
+              ten: form.elements.customerName.value.trim(),
+              soDienThoai: form.elements.customerPhone.value.trim(),
+              diaChi: form.elements.customerAddress.value.trim(),
+            },
+            chiTietDonHang: cart.map((i) => ({
+              tenVong: i.n,
+              donGia: i.p,
+              soLuong: i.q,
+              thanhTien: i.p * i.q,
+              tuyChon: i.note || "Mẫu có sẵn",
+              hinhAnhSVG: svgDataUri(i.o),
+              hinhAnhSVGNoiDung: svg(i.o),
+            })),
+            tongSoLuong: cart.reduce((a, i) => a + i.q, 0),
+            tongTien: cart.reduce((a, i) => a + i.p * i.q, 0),
+            phuongThucThanhToan: "Thanh toán khi nhận hàng",
+            trangThai: "Chờ xác nhận",
+          };
+          await saveOrderToSupabase(order);
+          cart = [];
+          renderCart();
+          $("#md").innerHTML =
+            `${X}<div><span class="eyebrow">Đặt hàng thành công</span><h2 class="h2" style="margin:6px 0 8px">Đơn hàng ${escapeHtml(orderId)}</h2><p class="sub">Đơn hàng đã được lưu trực tuyến. Bạn có thể đóng trang này; chủ shop sẽ kiểm tra đơn trong bảng don_hang trên Supabase.</p><p class="save-note">Mã đơn hàng của bạn: <b>${escapeHtml(orderId)}</b>. Hãy lưu lại mã này nếu cần liên hệ về đơn hàng.</p><button class="btn p" id="order-again" style="justify-content:center;margin-top:16px">Tiếp tục mua sắm</button></div>`;
+          open("#md", true);
+        } catch (err) {
+          console.error("Không lưu được đơn hàng:", err);
+          submitButton.disabled = false;
+          submitButton.textContent = originalLabel;
+          const note = form.querySelector(".save-note");
+          if (note)
+            note.textContent =
+              "Chưa gửi được đơn hàng lên hệ thống. Đơn chưa được xác nhận; vui lòng thử lại sau khi chủ shop kiểm tra cấu hình kết nối. Chi tiết: " +
+              (err.message || "Lỗi kết nối");
+          toast("Chưa lưu được đơn hàng. Vui lòng thử lại.");
+        }
+      });
+
+      // custom builder
+      const B = { color: "pink", type: "round", charm: "none", size: 15 };
+      function renderB() {
+        const ex =
+          (B.type === "pearl" ? 20000 : B.type === "flower" ? 10000 : 0) +
+          (B.charm !== "none" ? 15000 : 0);
+        B.price = 49000 + ex;
+        $("#prev").innerHTML = svg(B);
+        $("#cp").textContent = fmt(B.price);
+        const ch = (a, k, l) =>
+          l
+            .map(
+              ([v, t]) =>
+                `<button class="chip ${B[k] === v ? "on" : ""}" data-b="${k}:${v}">${t}</button>`,
+            )
+            .join("");
+        $("#oc").innerHTML = Object.keys(COL)
+          .map(
+            (c) =>
+              `<button class="sw ${B.color === c ? "on" : ""}" data-b="color:${c}" aria-label="${CN[c]}" style="background:${COL[c][1]}"></button>`,
+          )
+          .join("");
+        $("#ob").innerHTML = ch(0, "type", [
+          ["round", "Hạt tròn"],
+          ["flower", "Hạt hoa +10k"],
+          ["pearl", "Ngọc trai +20k"],
+        ]);
+        $("#och").innerHTML = ch(0, "charm", [
+          ["none", "Không"],
+          ["heart", "Trái tim"],
+          ["bow", "Nơ"],
+          ["star", "Ngôi sao"],
+        ]);
+        $("#os").innerHTML = [14, 15, 16, 17, 18]
+          .map(
+            (s) =>
+              `<button class="chip ${B.size === s ? "on" : ""}" data-b="size:${s}">${s} cm</button>`,
+          )
+          .join("");
+      }
+      // static render
+      document
+        .querySelectorAll("[data-i]")
+        .forEach(
+          (e) =>
+            (e.innerHTML = ic(
+              e.dataset.i,
+              e.parentElement.classList.contains("tr") ? 22 : 18,
+            )),
+        );
+      $("#sb").innerHTML = ic("search");
+      $("#ub").innerHTML = ic("user");
+      $("#cb").insertAdjacentHTML("afterbegin", ic("bag"));
+      $("#mb").innerHTML = ic("menu");
+      $("#dx").innerHTML = ic("x");
+      $("#collage").innerHTML =
+        `<div class="b b1">${svg({ color: "pink", type: "round", charm: "heart", mix: "cream" })}</div><div class="b b2">${svg({ color: "lav", type: "flower", charm: "star" })}</div><div class="b b3">${svg({ color: "cream", type: "pearl", charm: "none" })}</div><span class="dec" style="right:6%;top:6%">${ic("sparkle", 26)}</span><span class="dec" style="left:2%;bottom:30%">${ic("heart", 22)}</span><span class="dec" style="right:12%;bottom:4%">${ic("star", 20)}</span>`;
+      $("#cats").innerHTML = CATS.filter((c) => c[0] !== "all")
+        .map(
+          (c) =>
+            `<button class="cat" data-go="${c[0]}"><span>${ic(c[2], 24)}</span><b>${c[1]}</b><small>${c[0] === "custom" ? "Tự ghép theo ý bạn" : PR.filter((p) => p.cat === c[0]).length + " mẫu"}</small></button>`,
+        )
+        .join("");
+      const RV = [
+        [
+          "Minh Anh",
+          "Vòng đẹp hơn ảnh, hạt ghép chắc tay và đóng gói siêu xinh. Mình đã đặt thêm một chiếc tặng bạn thân.",
+          3,
+        ],
+        [
+          "Thảo Vy",
+          "Tự ghép vòng rất vui, xem trước màu rồi mới đặt nên nhận về đúng ý. Đổi size cũng nhanh.",
+          8,
+        ],
+        [
+          "Khánh Linh",
+          "Vòng đôi mua cho hai đứa, màu pastel dễ phối đồ. Giao đến trong 3 ngày.",
+          5,
+        ],
+      ];
+      $("#rev").innerHTML = RV.map(
+        (r) =>
+          `<div class="rc"><div class="ph">${svg(PR.find((p) => p.id === r[2]).o)}</div><div class="st">${ic("star").repeat(5)}</div><p>${r[1]}</p><b>${r[0]}</b></div>`,
+      ).join("");
+      // events
+      document.addEventListener("click", (e) => {
+        const t = e.target.closest("button,a,[data-d]");
+        if (!t) return;
+        const d = t.dataset;
+        if (d.a) {
+          add(pk(PR.find((p) => p.id == d.a)));
+        } else if (d.d) detail(+d.d);
+        else if (d.c) {
+          F.cat = d.c;
+          renderFilters();
+          renderGrid();
+        } else if (d.go) {
+          if (d.go === "custom") location.hash = "custom";
+          else {
+            F.cat = d.go;
+            renderFilters();
+            renderGrid();
+            location.hash = "shop";
+          }
+        } else if (d.b) {
+          const [k, v] = d.b.split(":");
+          B[k] = k === "size" ? +v : v;
+          renderB();
+        } else if (d.m) {
+          const i = cart[d.m];
+          i.q > 1 ? i.q-- : cart.splice(d.m, 1);
+          renderCart();
+        } else if (d.p) {
+          cart[d.p].q++;
+          renderCart();
+        } else if (d.r) {
+          cart.splice(d.r, 1);
+          renderCart();
+        } else if (d.x) {
+          open("#md", false);
+        } else if (d.info) info(d.info);
+        else if (d.soc) toast("Kênh này sẽ sớm cập nhật");
+        else if (t.id === "cb" || t.id === "mbar") open("#dr", true);
+        else if (t.id === "order-again") {
+          open("#md", false);
+          location.hash = "shop";
+        } else if (t.id === "dx") open("#dr", false);
+        else if (t.id === "sb") {
+          $("#sbar").classList.toggle("on");
+          $("#q").focus();
+        } else if (t.id === "ub") toast("Tài khoản sẽ sớm ra mắt");
+        else if (t.id === "mb") $("#nav").classList.toggle("on");
+        else if (t.id === "co") {
+          cart.length ? checkout() : toast("Giỏ hàng đang trống");
+        } else if (t.id === "addc")
+          add({
+            key: `c-${B.color}-${B.type}-${B.charm}-${B.size}`,
+            n: "Vòng tự ghép của bạn",
+            p: B.price,
+            o: { color: B.color, type: B.type, charm: B.charm },
+            note: `${CN[B.color]} · ${{ round: "Hạt tròn", flower: "Hạt hoa", pearl: "Ngọc trai" }[B.type]} · size ${B.size} cm`,
+          });
+        if (t.tagName === "A") $("#nav").classList.remove("on");
+      });
+      $("#ov").onclick = () => {
+        open("#dr", false);
+        open("#md", false);
+      };
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          open("#dr", false);
+          open("#md", false);
+        }
+      });
+      document.addEventListener("change", (e) => {
+        if (e.target.id === "pf") {
+          F.price = e.target.value;
+          renderGrid();
+        }
+      });
+      $("#q").oninput = (e) => {
+        F.q = e.target.value.trim().toLowerCase();
+        renderGrid();
+        if (F.q) location.hash = "shop";
+      };
+      $("#cf").onsubmit = (e) => {
+        e.preventDefault();
+        e.target.reset();
+        toast("Đã gửi! 3Đ sẽ phản hồi bạn sớm");
+      };
+      renderFilters();
+      renderGrid();
+      renderB();
+      renderCart();
+      const io = new IntersectionObserver(
+        (es) =>
+          es.forEach((x) => {
+            if (x.isIntersecting) {
+              x.target.classList.add("in");
+              io.unobserve(x.target);
+            }
+          }),
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll("section .wrap>*,.trust").forEach((e) => {
+        e.classList.add("rv");
+        io.observe(e);
+      });
+      const L = [...document.querySelectorAll("#nav a")];
+      addEventListener(
+        "scroll",
+        () => {
+          let k = 0;
+          ["#shop", "#custom", "#contact"].forEach((s, i) => {
+            if ($(s).getBoundingClientRect().top < 140) k = i + 1;
+          });
+          L.forEach((a, i) => a.classList.toggle("on", i === k));
+        },
+        { passive: true },
+      );
+    </script>
+  </body>
+</html>
